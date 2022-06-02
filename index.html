@@ -1,0 +1,48 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+</head>
+<body>
+    <div class="text-container">이승엽의 통산 기록</div>
+    <div>
+        <canvas id="myChart"></canvas>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>const data = {
+  labels: [
+    '타율',
+    '출루',
+    '장타',
+    'OPS',
+    'BABIP',
+    'WAR'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [30.2, 38.9, 57.2, 96.0, 31.3, 72.06],
+    backgroundColor: [
+      'red',
+      'green',
+      'yellow',
+      'grey',
+      'blue',
+      'orange'
+    ]
+  }]
+};
+          
+const config = {
+  type: 'polarArea',
+  data: data,
+  options: {}
+};
+          </script>
+          <script>
+            const myChart1 = new Chart(
+              document.getElementById('myChart'),
+              config
+            );
+          </script>
+      </div>
+</body>
+</html>
